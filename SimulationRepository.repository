@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_U7E8MDW_EeiRrrI_G69wIA" entityName="New Repository">
+  <components__Repository xsi:type="repository:BasicComponent" id="_VcTFMDYHEeiRrrI_G69wIA" entityName="DatabaseServer">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_armboDYHEeiRrrI_G69wIA" entityName="OperationProvidedRole1" providedInterface__OperationProvidedRole="_qjw74DW_EeiRrrI_G69wIA"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_i86GAFJMEeiXPZOFxR7Lfg" describedService__SEFF="_kLkOQDXAEeiRrrI_G69wIA">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_jjp88FJMEeiXPZOFxR7Lfg" successor_AbstractAction="_niFhYFJMEeiXPZOFxR7Lfg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_jjp88VJMEeiXPZOFxR7Lfg" predecessor_AbstractAction="_niFhYFJMEeiXPZOFxR7Lfg"/>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_niFhYFJMEeiXPZOFxR7Lfg" entityName="LoopAction1" predecessor_AbstractAction="_jjp88FJMEeiXPZOFxR7Lfg" successor_AbstractAction="_jjp88VJMEeiXPZOFxR7Lfg">
+        <bodyBehaviour_Loop id="_niFhYVJMEeiXPZOFxR7Lfg">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_niFhYlJMEeiXPZOFxR7Lfg" successor_AbstractAction="_Bj9H0FJNEeiXPZOFxR7Lfg"/>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_niFhY1JMEeiXPZOFxR7Lfg" predecessor_AbstractAction="_D39KwFJNEeiXPZOFxR7Lfg"/>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_Bj9H0FJNEeiXPZOFxR7Lfg" entityName="InternalAction1" predecessor_AbstractAction="_niFhYlJMEeiXPZOFxR7Lfg" successor_AbstractAction="_D39KwFJNEeiXPZOFxR7Lfg">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="200"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_D39KwFJNEeiXPZOFxR7Lfg" entityName="InternalAction2" predecessor_AbstractAction="_Bj9H0FJNEeiXPZOFxR7Lfg" successor_AbstractAction="_niFhY1JMEeiXPZOFxR7Lfg">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="100"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_BIjHoQ3KEdyouMqirZIhzQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_qjw74DW_EeiRrrI_G69wIA" entityName="DatabaseInterface">
+    <signatures__OperationInterface id="_kLkOQDXAEeiRrrI_G69wIA" entityName="store">
+      <parameters__OperationSignature parameterName="surname">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="name">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+</repository:Repository>
